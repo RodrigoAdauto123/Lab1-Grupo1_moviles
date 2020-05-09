@@ -1,5 +1,7 @@
 package lab1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -22,6 +24,10 @@ public class App {
 
                 case 1:
                     String numero1 = sc.nextLine();
+                    //List list = new ArrayList();
+                    //list.add(numero1);
+
+                    //try { if list.size()
                     try { int verif = Integer.valueOf(numero1);
                     matematica.Fibonacci(verif); }
                     catch (NumberFormatException e)
