@@ -14,7 +14,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class App {
-    private static Object Persona;
 
     public static void main(String[] args) {
 
@@ -24,18 +23,16 @@ public class App {
                 // Creo una instancia
                 ObjectMapper mapper = new ObjectMapper();
 
+                ListaPersona listaPersona = new ListaPersona();
                 // Guardo en el objeto
-                Persona persona = mapper.readValue(Paths.get("../resources/personas.json").toFile(), Persona.class);
+                listaPersona = mapper.readValue(Paths.get("../resources/personas.json").toFile(), ListaPersona.class);
 
                 // Imprimo
-                System.out.println(persona.getNombre() + persona.getApellido());
+                System.out.println(listaPersona);
 
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-
-
-        //  Eliminar Personas
 
 
 
