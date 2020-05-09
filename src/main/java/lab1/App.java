@@ -1,5 +1,9 @@
 package lab1;
 
+import com.sun.istack.internal.localization.NullLocalizable;
+import jdk.nashorn.internal.ir.CatchNode;
+
+import javax.print.attribute.standard.NumberUp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -40,32 +44,46 @@ public class App {
 
                     String numero2 = sc.nextLine();
                     List list2 = new ArrayList();
-                    list1.add(numero2);
-                    try { int verif = Integer.valueOf(numero2);
-                        matematica.Fibonacci(verif); }
-                    catch (NumberFormatException e)
-                    { System.out.println("Inserte un numero:"); }
+                    list2.add(numero2);
+                    try {
+                        if (list2.size() == 1) {
+                            try {
+                                int verif = Integer.valueOf(numero2);
+                                matematica.Fibonacci(verif);
+                            } catch (NumberFormatException e) {
+                                System.out.println("Inserte un numero:");
+                            }
+                        }
+                    } catch (NullPointerException e) {System.out.println("Escriba solo un elemento"); }
+
+
                     break;
 
                 case 3:
 
                     String numero3 = sc.nextLine();
                     List list3 = new ArrayList();
-                    list1.add(numero3);
+                    list3.add(numero3);
+                    try {
+                        if (list3.size() == 1) {
                     try { int verif = Integer.valueOf(numero3);
                         matematica.Fibonacci(verif); }
                     catch (NumberFormatException e)
-                    { System.out.println("Inserte un numero:"); }
+                    { System.out.println("Inserte un numero:"); } } }
+                    catch (NullPointerException e) {System.out.println("Escriba solo un elemento"); }
                     break;
 
                 case 4:
                     String numero4 = sc.nextLine();
                     List list4 = new ArrayList();
-                    list1.add(numero4);
+                    list4.add(numero4);
+                    try {
+                        if (list4.size() == 1) {
                     try { int verif = Integer.valueOf(numero4);
                         matematica.Factorial(verif); }
                     catch (NumberFormatException e)
-                    { System.out.println("Inserte un numero:"); }
+                    { System.out.println("Inserte un numero:"); } } }
+                    catch (NullPointerException e) {System.out.println("Escriba solo un elemento"); }
                     break;
 
 
