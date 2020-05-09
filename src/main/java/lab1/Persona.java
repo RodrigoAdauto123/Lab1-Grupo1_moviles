@@ -10,6 +10,15 @@ public class Persona {
     private float peso;
     private int direccion_ip;
 
+    public Persona(String nombre, String apellido, String email, String ciudad, String fecha_nacimiento, float peso, int direccion_ip) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.ciudad = ciudad;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.peso = peso;
+        this.direccion_ip = direccion_ip;
+    }
 
     public String getNombre() {
         return nombre;
