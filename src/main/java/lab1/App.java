@@ -24,18 +24,23 @@ public class App {
 
                 case 1:
                     String numero1 = sc.nextLine();
-                    //List list = new ArrayList();
-                    //list.add(numero1);
-
-                    //try { if list.size()
-                    try { int verif = Integer.valueOf(numero1);
-                    matematica.Fibonacci(verif); }
-                    catch (NumberFormatException e)
-                    { System.out.println("Inserte un numero:"); }
+                    List list1 = new ArrayList();
+                    list1.add(numero1);
+                    try { if ( list1.size() ==1) {
+                        try {
+                            int verif = Integer.valueOf(numero1);
+                            matematica.Fibonacci(verif);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Inserte un numero:");
+                        }
+                    } } catch (NullPointerException e) {System.out.println("Escriba solo un elemento"); }
                     break;
 
                 case 2:
+
                     String numero2 = sc.nextLine();
+                    List list2 = new ArrayList();
+                    list1.add(numero2);
                     try { int verif = Integer.valueOf(numero2);
                         matematica.Fibonacci(verif); }
                     catch (NumberFormatException e)
@@ -43,7 +48,10 @@ public class App {
                     break;
 
                 case 3:
+
                     String numero3 = sc.nextLine();
+                    List list3 = new ArrayList();
+                    list1.add(numero3);
                     try { int verif = Integer.valueOf(numero3);
                         matematica.Fibonacci(verif); }
                     catch (NumberFormatException e)
@@ -52,6 +60,8 @@ public class App {
 
                 case 4:
                     String numero4 = sc.nextLine();
+                    List list4 = new ArrayList();
+                    list1.add(numero4);
                     try { int verif = Integer.valueOf(numero4);
                         matematica.Factorial(verif); }
                     catch (NumberFormatException e)
