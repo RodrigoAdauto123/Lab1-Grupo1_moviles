@@ -8,8 +8,17 @@ public class Persona {
     private String ciudad;
     private String fecha_nacimiento;
     private float peso;
-    private int direccion_ip;
+    private String direccion_ip;
 
+    public Persona(String nombre, String apellido, String email, String ciudad, String fecha_nacimiento, float peso, String direccion_ip) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.ciudad = ciudad;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.peso = peso;
+        this.direccion_ip = direccion_ip;
+    }
 
     public String getNombre() {
         return nombre;
@@ -59,11 +68,12 @@ public class Persona {
         this.peso = peso;
     }
 
-    public int getDireccion_ip() {
+    public String getDireccion_ip() {
         return direccion_ip;
     }
 
-    public void setDireccion_ip(int direccion_ip) {
+    public void setDireccion_ip(String direccion_ip) {
         this.direccion_ip = direccion_ip;
     }
+
 }
