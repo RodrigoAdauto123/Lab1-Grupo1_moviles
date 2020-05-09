@@ -6,6 +6,7 @@ import static lab1.Matematica.verificarSiEsPrimo;
 
 public class App {
     public static void main(String[] args) {
+        while (true){
         Scanner sc =new Scanner(System.in);
 
         System.out.print("Ingrese un numero:");
@@ -60,5 +61,5 @@ public class App {
 
 
 
-    }
+    }}
 }
