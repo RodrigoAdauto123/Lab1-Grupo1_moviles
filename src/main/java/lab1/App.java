@@ -6,7 +6,72 @@ import static lab1.Matematica.verificarSiEsPrimo;
 
 public class App {
     public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        Matematica matematica = new Matematica();
         while (true){
+            System.out.println("Opcion1. Numero Primo");
+            System.out.println("Opcion2. Extraer MCD");
+            System.out.println("Opcion3. Serie Fibonacci");
+            System.out.println("Opcion4. Factorial");
+
+            System.out.println("Opción:");
+            String opcion = sc.nextLine();
+            int option = Integer.valueOf(opcion);
+
+            switch (option){
+
+                case 1:
+                    String numero1 = sc.nextLine();
+                    List list1 = new ArrayList();
+                    list1.add(numero1);
+                    try { if ( list1.size() ==1) {
+                        try {
+                            int verif = Integer.valueOf(numero1);
+                            matematica.Fibonacci(verif);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Inserte un numero:");
+                        }
+                    } } catch (NullPointerException e) {System.out.println("Escriba solo un elemento"); }
+                    break;
+
+                case 2:
+
+                    String numero2 = sc.nextLine();
+                    List list2 = new ArrayList();
+                    list1.add(numero2);
+                    try { int verif = Integer.valueOf(numero2);
+                        matematica.Fibonacci(verif); }
+                    catch (NumberFormatException e)
+                    { System.out.println("Inserte un numero:"); }
+                    break;
+
+                case 3:
+
+                    String numero3 = sc.nextLine();
+                    List list3 = new ArrayList();
+                    list1.add(numero3);
+                    try { int verif = Integer.valueOf(numero3);
+                        matematica.Fibonacci(verif); }
+                    catch (NumberFormatException e)
+                    { System.out.println("Inserte un numero:"); }
+                    break;
+
+                case 4:
+                    String numero4 = sc.nextLine();
+                    List list4 = new ArrayList();
+                    list1.add(numero4);
+                    try { int verif = Integer.valueOf(numero4);
+                        matematica.Factorial(verif); }
+                    catch (NumberFormatException e)
+                    { System.out.println("Inserte un numero:"); }
+                    break;
+
+
+
+            }
+
             Scanner sc =new Scanner(System.in);
 
             System.out.print("Ingrese un numero:");
